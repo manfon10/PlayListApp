@@ -4,7 +4,7 @@
 
 ## Tecnologías Usadas
 
-### Las tecnologías manejadas fueron: NodeJS en la parte del Backend y ReactJS en la parte del Fronted 
+#### Las tecnologías manejadas fueron: NodeJS en la parte del Backend y ReactJS en la parte del Fronted 
 
 ## Diagrama de Base de Datos
 
