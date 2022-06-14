@@ -2,4 +2,4 @@
 
 ## Diagrama de Base de Datos
 
-![Diagrama](https://imgur.com/a/0meOPW5)
+![Diagrama](https://github.com/manfon10/PlayListApp/blob/main/client/src/assets/diagrama.png)
