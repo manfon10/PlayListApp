@@ -18,7 +18,7 @@ const SignupForm = () => {
     return (
         <div className={styles.container_login}>
             <div className={styles.name_app}>
-                <h3><i className="fa-solid fa-calendar"></i> PlayList App</h3> 
+                <h3><i className="fa-solid fa-music"></i> PlayList App</h3> 
             </div>
             <form onSubmit={handleSubmit(registerHandler)} className={styles.form_login}>
                 <p>Name</p>
