@@ -15,7 +15,7 @@ db.authenticate()
 initModels();
 
 // Sync sequelize models
-db.sync({ force: false })
+db.sync({ force: true })
     .then(() => console.log('Database synced'))
     .catch(err => console.log(err));
 

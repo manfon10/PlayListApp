@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from '../../redux/actions';
+import LoginInfo from './LoginInfo';
 import styles from './login.module.css';
 
 const LoginForm = () => {
@@ -36,6 +37,7 @@ const LoginForm = () => {
                 </Link>
                 <button>Log In</button>
             </form>
+            <LoginInfo styles={styles} />
         </div>
     );
 };

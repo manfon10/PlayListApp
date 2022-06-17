@@ -4,7 +4,8 @@ import GetConfig from '../../utils/GetConfig';
 
 export const loginActions = {
     setUserInfo: "LOGIN_USER",
-    setUserError: "LOGIN_ERROR"
+    setUserError: "LOGIN_ERROR",
+    setUserSignUp: "SIGN_UP"
 }
 
 export const setUserInfo = userInfo => ({
@@ -15,6 +16,11 @@ export const setUserInfo = userInfo => ({
 export const setError = error => ({
     type: loginActions.setUserError,
     payload: error
+});
+
+export const setSignUp = (message) => ({
+    type: loginActions.setUserSignUp,
+    payload: message
 });
 
 export const loginThunk = data => {
@@ -29,7 +35,7 @@ export const loginThunk = data => {
             .catch(err => {
                 dispatch(setError(err.response.data.message));
                 setTimeout(() => {
-                    dispatch(setError({}));
+                    dispatch(setError(""));
                 }, 4000);
             });
     };
@@ -39,7 +45,13 @@ export const signupThunk = data => {
     return dispatch => {
         axios
             .post('http://localhost:2920/api/v1/users/signup', data)
-            .then( res => history.replace("/login"))
+            .then( res => {
+                dispatch(setSignUp(res.data.message));
+                history.replace("/login");
+                setTimeout(() => {
+                    dispatch(setSignUp(""));
+                }, 4000);
+            })
             .catch(err => dispatch(setError(err.response.data.message)));
     };
 };

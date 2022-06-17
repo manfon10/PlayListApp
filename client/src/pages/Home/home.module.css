@@ -12,6 +12,7 @@
 .container_table_songs {
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 .table_songs {

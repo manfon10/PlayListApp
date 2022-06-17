@@ -28,9 +28,7 @@ const createUser = catchAsync(async (req, res) => {
 
     const newUser = await User.create({ name, email, password: hashPassword });
 
-    newUser.password = undefined;
-
-    res.status(201).json({ newUser });
+    res.status(201).json({ message: 'User create successfully' });
 
 });
 

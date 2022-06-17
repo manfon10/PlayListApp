@@ -1,5 +1,5 @@
 export { default as LoginScreen } from './Login/LoginScreen';
-export { default as LoginError } from './Login/LoginError';
+export { default as LoginInfo } from './Login/LoginInfo';
 export { default as SignupScreen } from './Signup/SignupScreen';
 export { default as Navbar } from './Header/Navbar';
 export { default as SearchBox } from './Home/SearchBox';

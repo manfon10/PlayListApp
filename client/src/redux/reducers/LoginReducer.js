@@ -2,7 +2,8 @@ import { loginActions } from '../actions';
 
 const INITIAL_STATE = {
     userInfo: [],
-    errorInfo: {}
+    infoUser: "",
+    userError: ""
 }
 
 const LoginReducer = ( state = INITIAL_STATE, action) => {
@@ -16,7 +17,13 @@ const LoginReducer = ( state = INITIAL_STATE, action) => {
         case loginActions.setUserError:
             return {
                 ...state,
-                errorInfo: action.payload
+                userError: action.payload
+            }
+
+        case loginActions.setUserSignUp:
+            return {
+                ...state,
+                infoUser: action.payload
             }
     
         default:

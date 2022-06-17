@@ -72,7 +72,7 @@ const deleteSongToPlayList = catchAsync(async (req, res) => {
 
     const { song } = req;
 
-    await SongPlayList.update({ status: 'deleted' }, { where: { songId: song.id } });
+    await SongPlayList.update({ status: 'deleted' }, { where: { songId: song.id,  } });
 
     res.status(201).json({ status: 'Song delete to playlist successfully' });
 

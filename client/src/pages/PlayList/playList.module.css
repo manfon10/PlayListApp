@@ -26,6 +26,10 @@
     text-align: center;
 }
 
+.container_playlists  > h3 {
+    margin: 20px;
+}
+
 .title_playlist {
     text-align: center;
     border-bottom: 1px solid black;

@@ -31,7 +31,15 @@ const PlayListsSongs = ({ styles }) => {
                                                 <>
                                                     <i className="fa-solid fa-music"></i>
                                                     <p>{songPlayList.song.name}</p>
-                                                    <i className="fa-solid fa-ban" onClick={() => deleteSongToPlayListhandle(songPlayList.song.id)}></i>
+                                                    <i 
+                                                        className="fa-solid fa-ban" 
+                                                        onClick={() => { 
+                                                            deleteSongToPlayListhandle({
+                                                                idSong: songPlayList.song.id,
+                                                                idPlayList: songPlayList.playlist.id
+                                                            })
+                                                        }}>
+                                                    </i>
                                                 </>
                                             )
                                         }
