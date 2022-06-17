@@ -92,10 +92,10 @@ export const addSognPlayListThunk = data => {
     };
 };
 
-export const deleteSongPlayList = (data) => {
+export const deleteSongPlayList = (idSong) => {
     return dispatch => {
         axios
-            .delete(`http://localhost:2920/api/v1/songs/${data.idSong}`, GetConfig())
+            .delete(`http://localhost:2920/api/v1/songs/${idSong}`, GetConfig())
             .then( res => {
                 dispatch(deleteSong());
                 dispatch(getSongPlayListThunk());

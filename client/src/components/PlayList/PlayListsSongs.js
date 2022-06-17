@@ -25,7 +25,7 @@ const PlayListsSongs = ({ styles }) => {
                             </div>
                             {
                                 songsPlayList.map( songPlayList => (
-                                    <article className={styles.songs_playlist} key={songPlayList.id} id="div_song">
+                                    <article className={styles.songs_playlist} key={songPlayList.id}>
                                         {
                                             songPlayList.playlist.id === id && (
                                                 <>
@@ -35,8 +35,7 @@ const PlayListsSongs = ({ styles }) => {
                                                         className="fa-solid fa-ban" 
                                                         onClick={() => { 
                                                             deleteSongToPlayListhandle({
-                                                                idSong: songPlayList.song.id,
-                                                                idPlayList: songPlayList.playlist.id
+                                                                songPlayList.song.id
                                                             })
                                                         }}>
                                                     </i>
