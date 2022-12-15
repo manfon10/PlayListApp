@@ -1,9 +1,14 @@
+import { FC } from "react";
+
 import { Button } from "@mui/material";
-import React, { FC } from "react";
+
+import Content from "../components/Layout/Content";
 
 const Home: FC = () => {
   return (
-    <Button>Home jeje</Button>
+    <Content title="Home | PlayListApp">
+      <Button>Hola</Button>
+    </Content>
   );
 };
 
