@@ -1,17 +1,19 @@
 import { FC } from "react";
 
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetData } from "react-helmet-async";
 
 import { IHeaderProps } from "../../types/Header";
 
 const Header: FC<IHeaderProps> = (props) => {
+  const helmetData = new HelmetData({});
+
   return (
-    <Helmet>
+    <Helmet helmetData={helmetData}>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
       />
-      <title>{props.title}</title>
+      <title>{`${props.title} | PlayListApp`}</title>
     </Helmet>
   );
 };
