@@ -3,14 +3,14 @@ import { useMemo, useState } from "react";
 import { createTheme } from "@mui/material/styles";
 
 export default function useToggleColorMode() {
-  const [mode, setMode] = useState<'light' | 'dark'>('light');
+  const [mode, setMode] = useState<"light" | "dark">("light");
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
       },
     }),
-    [],
+    []
   );
 
   const theme = useMemo(
@@ -20,11 +20,11 @@ export default function useToggleColorMode() {
           mode,
         },
       }),
-    [mode],
+    [mode]
   );
 
   return {
     theme,
-    colorMode
-  }
+    colorMode,
+  };
 }

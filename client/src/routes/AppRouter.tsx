@@ -2,13 +2,14 @@ import { FC } from "react";
 
 import { Routes, Route, HashRouter } from "react-router-dom";
 
-import Home from "../pages/Home";
+import { HomePage, UserPage } from "../pages";
 
 const AppRouter: FC = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/user" element={<UserPage />} />
       </Routes>
     </HashRouter>
   );
