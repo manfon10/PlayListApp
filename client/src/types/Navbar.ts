@@ -6,3 +6,7 @@ export interface INavbarProps {
 export interface IUserIconProps {
   handleRoute: () => void;
 }
+
+export interface IMenuItemProps {
+  name: string;
+}
