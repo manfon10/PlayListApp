@@ -2,7 +2,13 @@ import { FC } from "react";
 
 import { Routes, Route, HashRouter } from "react-router-dom";
 
-import { HomePage, UserPage } from "../pages";
+import {
+  CreatorPage,
+  HomePage,
+  PlaylistPage,
+  SongPage,
+  UserPage,
+} from "../pages";
 
 const AppRouter: FC = () => {
   return (
@@ -10,6 +16,9 @@ const AppRouter: FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/user" element={<UserPage />} />
+        <Route path="/creator" element={<CreatorPage />} />
+        <Route path="/playlist" element={<PlaylistPage />} />
+        <Route path="/songs" element={<SongPage />} />
       </Routes>
     </HashRouter>
   );

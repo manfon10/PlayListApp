@@ -6,12 +6,16 @@ import TopBar from "./TopBar";
 
 import { IContentProps } from "../../types/Content";
 
+import useContentStyles from "../../styles/content.style";
+
 const Content: FC<IContentProps> = (props) => {
+  const classes = useContentStyles(props);
+
   return (
     <>
       <Header title={props.title} />
       <TopBar />
-      <main>{props.children}</main>
+      <main className={classes.main}>{props.children}</main>
       <Footer />
     </>
   );

@@ -4,12 +4,12 @@ import { Button } from "@mui/material";
 
 import Content from "../components/Layout/Content";
 
-const Home: FC = () => {
+const Playlist: FC = () => {
   return (
-    <Content title="Home" topHeight={0}>
-      <Button>Hola</Button>
+    <Content title="Playlists">
+      <Button>Playlist</Button>
     </Content>
   );
 };
 
-export default Home;
+export default Playlist;
